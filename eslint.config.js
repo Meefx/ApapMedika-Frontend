@@ -13,11 +13,13 @@ export default [
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**', 'tailwind.config.js'],
   },
 
-  {
-    'vue/multi-word-component-names': 'off',
-  },
-
   ...pluginVue.configs['flat/essential'],
   ...vueTsEslintConfig(),
   skipFormatting,
+
+  {
+    rules: {
+      'vue/multi-word-component-names': 0,
+    },
+  },
 ]
